@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restuarant Website</title>
+    <style>
+        body{
+            padding:0;
+            margin:0;
+        }
+        .slider {
+            background-image: url("https://wallup.net/wp-content/uploads/2019/09/48315-sea-ocean-restaurant-romance-open-beautiful-sea-ocean-restaurant-romance-view-buildings-3.jpg");
+            position: absolute;
+            top:0;
+            height: 90vh;
+            width: 100%;
+            background-size: cover;
+        }
+        .header {
+            position: absolute;
+            padding-top: 17px;
+            width:100%;
+            background: transparent ;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 100;
+        }
+        .navbar a {
+            font-size: 20px;
+            color:white;
+            text-decoration: none;
+            margin-left: 40px;
+        }
+        .navbar a:hover {
+            text-decoration: underline;
+        }
+        button{
+            margin-right: 40px;
+            border:0;
+            color:white;
+            transition: ease-out 0.4s;
+            font-size: 1rem;
+            outline:0;
+            border: 3px solid white;
+            position: relative;
+            z-index: 1;
+            background: transparent ;
+        }
+        button:hover {
+            color: black;
+            cursor: pointer;
+        }
+        button:before {
+            transition: 0.9s all ease;
+            position: absolute;
+            top:0;
+            left:50%;
+            right: 50%;
+            bottom:0;
+            opacity: 0;
+            content: "";
+            background-color: white;
+        }
+        button:hover:before {
+            transition:0.9s all ease;
+            left:0;
+            right:0;
+            opacity: 1;
+            z-index: -1;
+        }
+        .logo {
+            margin-left: 40px;
+            font-size: 2rem;
+            text-decoration: underline;
+            
+        }
+        .intro {
+            text-align: left;
+            align-items: left;
+            margin-top: 200px;
+        }
+        .intro h3 {
+            font-size: 7rem;
+            position: relative;
+            color: transparent;
+            -webkit-text-stroke: 0.1rem white;
+            left: 20px;
+        }
+        .intro h3:before {
+            content:attr(data-text);
+            position:absolute;
+            top:0;
+            left:0;
+            width:100%;
+            color:white;
+            overflow: hidden;
+            -webkit-text-stroke: 0rem white;
+            animation: animate 6s linear infinite;
+        }
+        @keyframes animate 
+        {
+            0%,10%,100%
+            {
+                width:0;
+            }
+            70%,90%
+            {
+                width: 100%;
+            }
+        }
+        p {
+            font-size: 2rem;
+            margin-left:30px;
+            color:white;
+            padding-bottom: 50px;
+        }
+        .menu_part {
+            width: 100%;
+            background-image: url("https://designonesource.com/wp-content/uploads/2020/07/Full-layout_U134-CST-Toffee-brown-min.jpg");
+            display:flex;
+            margin-top: 86vh;
+            justify-content: center;
+            align-items: center;
+            padding: 8px 0;
+            
+        }
+        .menu {
+            font-size: 4rem;
+            color: white;
+            text-orientation: upright;
+            writing-mode: vertical-lr;
+        }
+        .cate {
+            width: 290px;
+            height: 400px;
+            background-color: #aa8300;
+            border-radius: 15px;
+            padding: 10px;
+            margin: 10px;
+            overflow: hidden;
+        }
+
+        .part1, .part2 {
+            display: flex;
+        }
+
+
+        .food-item{
+            display: flex;
+        }
+
+        .food-item p {
+            font-size: small;
+        }
+        .food-item span {
+            margin-left: 100px;
+            margin-top: 10px;
+        }
+    .our_chefs {
+        background-color: #aa8300;
+        margin-top: -50px;
+        width:100%;
+        
+    }
+    .our_chefs h3 {
+        font-size: 3rem;
+        color: #fff;
+        text-align: center;
+    }
+    .our_chefs p {
+        color:#fff;
+        text-align: center;
+    }
+    .gallery {
+        display:flex;
+        margin-left: 150px;
+        margin-top: -20px;
+ 
+    }
+    .each_chef img {
+        width: 230px;
+        margin: 20px;
+        border-radius: 15px ;
+    }
+    .each_chef a {
+        margin-right: -25px;
+        font-size: 2rem;
+        color: #fff;
+        text-decoration: none;
+    }
+    .each_chef a:hover {
+        text-decoration: underline;
+    }
+    .contacts {
+        background-image: url("https://wallpapercave.com/wp/wp1874165.jpg");
+        width:100%;
+        text-align: center;
+        align-items: center;
+        margin-top: -48px;
+    }
+    .contacts h3 {
+        font-size: 3rem;
+        color: #fff;
+        padding-top: 40px;
+    }
+    .contacts input {
+        border-radius: 10px;
+        border: 2px solid#fff;
+        background-color: transparent;
+        height: 9px;
+        width: 200px;
+        padding:10px;
+        margin: 10px;
+        color: #fff;
+    }
+    #message {
+        height: 40px;
+        padding-top: 0;
+    }
+    .contacts button {
+        margin-left: 40px;
+    }
+    .info {
+        display:flex;
+        margin-left: 380px;
+        padding-top: 70px;
+        
+    }
+    .info img{
+       
+        padding: 7px;
+    }
+    .info p{
+        font-size: larger;
+    }
+    #insta, #locate {
+        padding-top: 3px;
+    }
+
+
+
+
+
+        
+
+
+
+
+
+
+
+    </style>
+</head>/>
+<body>
+    <div class="slider">
+        <div class="header">
+            <span class="logo"><i>Bellezar</i></span>
+            <nav class="navbar">
+                <a href="#">home</a>
+                <a href="#menu">menu</a>
+                <a href="#">our chefs</a>
+                <a href="#">contacts</a>
+                <a href="book.html"><button>book a table</button></a>
+            </nav>
+        </div>
+        <div class="intro">
+            <h3 data-text="Bellezar">Bellezar</h3>
+            <p><i>for the love of delicious food...</i</p>
+        </div>
+        
+    </div>
+
+    <div class="menu_part" id="menu">
+        <h2 class="menu">our menu</h2>
+        <div class="categories">
+            <div class="part1">
+                <div class="cate">
+                    <h3>Breakfast</h3>
+                    <div class="food-item"><p>mushroom pesto</p><span>R95</span></div>
+                    <div class="food-item"><p>bellezar breakfast</p><span>R105</span></div>
+                    <div class="food-item"><p>breakfast wrap</p><span>R110</span></div>
+                    <div class="food-item"><p>classic french toast</p><span>R126</span></div>
+                    <div class="food-item"><p>hashbrown benedict</p><span>R300</span></div>
+                    <div class="food-item"><p>bacon</p><span>R100</span></div>
+                    <div class="food-item"><p>spinach & mushrooms</p><span>R100</span></div>
+                    <div class="food-item"><p>halloumi</p><span>R104</span></div>
+                    <div class="food-item"><p>smoked salmon</p><span>R160</span></div>
+                    <div class="food-item"><p>Avocado & shrimp</p><span>R140</span></div>
+                </div>
+                <div class="cate">
+                    <h3>Salads</h3>
+                    <div class="food-item"><p>caprese</p><span>R90</span></div>
+                    <div class="food-item"><p>chicken</p><span>R105</span></div>
+                    <div class="food-item"><p>calamari</p><span>R120</span></div>
+                    <div class="food-item"><p>beetroot & danish feta</p><span>R100</span></div>
+                    <div class="food-item"><p>quinoa salad</p><span>R120</span></div>
+                </div>
+                <div class="cate">
+                    <h3>Light Meals</h3>
+                    <div class="food-item"><p>clamari steak trio</p><span>R120</span></div>
+                    <div class="food-item"><p>fresh mussel pot</p><span>R110</span></div>
+                    <div class="food-item"><p>peri peri chicken livers</p><span>R100</span></div>
+                    <div class="food-item"><p> grilled or fried calamari</p><span>R110</span></div>
+                    <div class="food-item"><p>4 grilled king prawns</p><span>R165</span></div>
+                    <div class="food-item"><p> 6 grilled king prawns</p><span>R240</span></div>
+                    <div class="food-item"><p>crumbed mushrooms</p><span>R90</span></div>
+                    <div class="food-item"><p>bbq basted chicken wings</p><span>R120</span></div>
+                    <div class="food-item"><p>fish and chips</p><span>R110</span></div>
+                    <div class="food-item"><p>beef fillet trinchado</p><span>R140</span></div>
+                    
+                </div>
+            </div>
+
+            <div class="part2">
+                <div class="cate">
+                    <h3>Kiddies Menu</h3>
+                    <div class="food-item"><p>kids burger & chips</p><span>R55</span></div>
+                    <div class="food-item"><p>fish fingers & chips</p><span>R55</span></div>
+                    <div class="food-item"><p>chicken strips & chips</p><span>R55</span></div>
+                    <div class="food-item"><p>creamy ham & cheese pasta</p><span>R70</span></div>
+                    <div class="food-item"><p>cheese toast</p><span>R50</span></div>
+                </div>
+                <div class="cate">
+                    <h3>Treats & Desserts</h3>
+                    <div class="food-item"><p>chocolate fondant</p><span>R75</span></div>
+                    <div class="food-item"><p>cheese cake of the day</p><span>R165</span></div>
+                    <div class="food-item"><p>creme brule</p><span>R60</span></div>
+                    <div class="food-item"><p>chocolate mousse</p><span>R60</span></div>
+                    <div class="food-item"><p>tiramisu</p><span>R60</span></div>
+                    <div class="food-item"><p>home made waffles</p><span>R50</span></div>
+                    <div class="food-item"><p>plain waffle</p><span>R50</span></div>
+                    <div class="food-item"><p>toffee & banana</p><span>R60</span></div>
+                    <div class="food-item"><p>chocolate brownie</p><span>R60</span></div>
+                    <div class="food-item"><p>mixed berries</p><span></span>R60</div>
+                    
+                </div>
+                <div class="cate">
+                    <h3>Drinks</h3>
+                    <div class="food-item"><p>cold drinks(coke,fanta)</p><span>R27</span></div>
+                    <div class="food-item"><p>mixed berry smoothy</p><span>R50</span></div>
+                    <div class="food-item"><p>smilkshake(strawberry, chocolate)</p><span>R50</span></div>
+                    <div class="food-item"><p>expresso</p><span>R25</span></div>
+                    <div class="food-item"><p>machiato</p><span>R23</span></div>
+                    <div class="food-item"><p>hot chocolate</p><span>R30</span></div>
+                    <div class="food-item"><p>cafe latte</p><span>R30</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="our_chefs">
+        <h3>our chefs</h3>
+        <p><i>meet our magic-makers...</i></p>
+        <div class="gallery">
+            <div class="each_chef">
+                <img src="images/Screenshot_10-2-2024_183816_www.instagram.com.jpeg"/>
+                <a href="https://www.instagram.com/primreddychapter/">Prim</a>
+            </div>
+            <div class="each_chef">
+                <img src="images/Screenshot_10-2-2024_183556_www.instagram.com.jpeg"/>
+                <a href="https://www.instagram.com/chef_bennym/">Benny</a>
+            </div>
+            <div class="each_chef">
+                <img src="images/Screenshot_10-2-2024_18358_www.instagram.com.jpeg"/>
+                <a href="https://www.instagram.com/mattyjones6/">Matthew</a>
+            </div>
+
+        </div>
+
+    </div>
+    <div class="contacts">
+        <h3>Contact us</h3>
+        <form action="#" name="myForm">
+            <input type="text" placeholder="Enter you name" name="name" required/><br>
+            <input type="email" placeholder="Email" name="email" required/><br>
+            <input type="text" placeholder="Enter your cell number" name="number" required/><br>
+            <input type="textarea" placeholder="Message..." id="message" name="message" required/><br>
+            <button class="send">Send message.</button>
+
+        </form>
+
+        <div class="info">
+            <span><p>0316512371</p></span>
+            <span><p>events@bellezar.co.za</p></span>
+            <span><a href="https://www.facebook.com/bellezardurban/"><img src="https://pluspng.com/img-png/facebook-logo-png-image-2335-1403.png" width="40px"/></a></span>
+            <span id="insta"><a href="https://www.instagram.com/bellezar_durban/"><img src="https://pngimg.com/uploads/instagram/instagram_PNG10.png" width="30px"/></a></span>
+            <span id="locate"><a href="https://www.bing.com/search?pglt=2211&q=bellezar+umhlanga&cvid=4402dd0ccb414af9ad98e2a046a856e5&gs_lcrp=EgZjaHJvbWUqBggDEEUYOzIGCAAQRRg8MgYIARBFGDkyBggCEC4YQDIGCAMQRRg7MgYIBBBFGDsyBggFEC4YQDIGCAYQRRg8MgYIBxBFGDwyBggIEEUYPNIBCTExODEyajBqMagCALACAA&FORM=ANNTA1&ucpdpc=UCPD&PC=LCTS"><img src="images/location-icon-png-4246.png" width="30px"/></a></span>
+
+        </div>
+
+
+    </div>
+<script>
+    const sendbtn = document.querySelector(".send");
+
+    function validateForm() {
+      // Get form elements
+      var name = document.forms["myForm"]["name"].value;
+      var email = document.forms["myForm"]["email"].value;
+      var email = document.forms["myForm"]["number"].value;
+      var email = document.forms["myForm"]["message"].value;
+
+      // Check if the fields are empty
+      if (name === "" || email === "" || number === "" || message === "") {
+        alert("Please fill out all required fields");
+      }else {
+        alert("Thank you. Your message has been sent!");
+      }
+    }
+
+    sendbtn.addEventListener('click', function(){
+        alert("Thank you. Your message has been sent!");
+    });
+
+</script>
+</body>
+</html>
